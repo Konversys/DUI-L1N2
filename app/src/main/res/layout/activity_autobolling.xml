@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    android:orientation="vertical"
+    tools:context=".activity_autobolling">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Утро"
+        android:minWidth="100dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26sp" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        style="@style/MyTimePickerWidgetStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:foregroundGravity="center"
+        android:layout_gravity="center_horizontal"
+        android:amPmTextColor="@color/white"
+        android:theme="@style/MyTimePickerWidgetStyle"
+        android:timePickerMode="spinner" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <CheckBox
+            style="@style/CheckedTextViewLeft"
+            android:text="Понидельник" />
+
+        <CheckBox
+            style="@style/CheckedTextViewLeft"
+            android:text="Вторник" />
+
+        <CheckBox
+            style="@style/CheckedTextViewLeft"
+            android:text="Среда" />
+
+        <CheckBox
+            style="@style/CheckedTextViewLeft"
+            android:text="Четверг" />
+
+        <CheckBox
+            style="@style/CheckedTextViewLeft"
+            android:text="Пятница" />
+
+        <CheckBox
+            style="@style/CheckedTextViewLeft"
+            android:text="Суббота" />
+
+        <CheckBox
+            style="@style/CheckedTextViewLeft"
+            android:text="Воскресенье" />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/water"/>
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/tea"/>
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/coffie"/>
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/bear"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/rl2"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="45dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/turn"/>
+        <TextView
+            android:id="@+id/changeTurn"
+            android:layout_width="match_parent"
+            android:text="Сохранить"
+            style="@style/MainText"
+            android:layout_marginLeft="0dp"/>
+    </RelativeLayout>
+</LinearLayout>
