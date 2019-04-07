@@ -10,93 +10,215 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/teapot_v"/>
+        android:src="@drawable/teapot_v" />
 
     <RelativeLayout
         android:id="@+id/rl0"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@color/itemBgWhite10"/>
+            android:src="@color/itemBgWhite10" />
+
         <TextView
-            android:text="@string/nextBoiling"
-            style="@style/MainText"/>
+            style="@style/MainText"
+            android:text="@string/nextBoiling" />
+
         <TextView
             android:id="@+id/nextBoiling"
             style="@style/MainText"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:text="Чай в 7:00 Суббота"/>
+            android:text="Чай в 7:00 Суббота" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        app:layout_constraintTop_toBottomOf="@id/rl0"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/rl0">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@color/itemBgWhite10"/>
+            android:src="@color/itemBgWhite10" />
+
         <TextView
             android:id="@+id/currentTemp"
-            android:text="Температура: 76°"
-            style="@style/MainText"/>
+            style="@style/MainText"
+            android:text="Температура: 76°" />
+
         <TextView
             android:id="@+id/currentV"
             style="@style/MainText"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:text="2.1 литр в чайнике"/>
+            android:text="2.1 литр в чайнике" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="200dp"
         android:layout_height="45dp"
         android:layout_marginTop="115dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
+            android:id="@+id/currentStatusColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="#3F51B5"/>
+            android:src="#3F51B5" />
+
         <TextView
             android:id="@+id/currentStatus"
-            android:text="Чайник остывает"
+            style="@style/MainText"
             android:layout_centerInParent="true"
-            style="@style/MainText"/>
+            android:text="Чайник остывает" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:background="#44555555"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Выберите напиток"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/mainWater"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="clickMWater"
+                    android:src="@drawable/water" />
+                <TextView
+                    android:text="Вода"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MainText"
+                    android:layout_marginLeft="0dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/mainTea"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="clickMTea"
+                    android:src="@drawable/tea" />
+                <TextView
+                    android:text="Чай"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MainText"
+                    android:layout_marginLeft="0dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/mainCoffie"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="clickMCoffie"
+                    android:src="@drawable/coffie" />
+                <TextView
+                    android:text="Кофе"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MainText"
+                    android:layout_marginLeft="0dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/mainBear"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="clickMBear"
+                    android:src="@drawable/bear" />
+                <TextView
+                    android:text="Пиво"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MainText"
+                    android:layout_marginLeft="0dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/rl2"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:layout_marginBottom="50dp"
+        android:onClick="ChangeTurnStatus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/turn"/>
+            android:src="@drawable/turn" />
+
         <ImageView
             android:layout_width="64px"
             android:layout_height="64px"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
             android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
             android:src="@drawable/turn_on" />
+
         <TextView
             android:id="@+id/changeTurn"
+            style="@style/MainText"
             android:layout_width="100dp"
-            android:text="Включить"
             android:layout_marginLeft="10dp"
-            style="@style/MainText"/>
+            android:text="Включить" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

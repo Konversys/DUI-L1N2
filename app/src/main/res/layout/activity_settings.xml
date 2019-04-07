@@ -7,6 +7,12 @@
     android:background="#000000"
     tools:context=".Settings">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/teapot_b"/>
+
     <RelativeLayout
         android:id="@+id/rl0"
         android:layout_width="match_parent"
@@ -58,6 +64,7 @@
             android:text="@string/maxTemp" />
 
         <TextView
+            android:id="@+id/maxTemp"
             style="@style/MainText"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
@@ -66,7 +73,6 @@
             android:text="70" />
 
         <TextView
-            android:id="@+id/maxTemp"
             style="@style/MainText"
             android:layout_alignParentRight="true"
             android:layout_marginTop="50dp"
@@ -82,7 +88,7 @@
             android:text="40" />
 
         <android.support.v7.widget.AppCompatSeekBar
-            android:id="@+id/seekbar_primary_dark_outline"
+            android:id="@+id/seekbar"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -108,37 +114,6 @@
             android:text="@string/autoBoiling"
             android:textColor="@color/white"
             android:textSize="18sp" />
-        <RelativeLayout
-            android:background="#333333"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/water"/>
-            <TextView
-                android:layout_marginLeft="70dp"
-                android:layout_width="wrap_content"
-                android:text="Утро"
-                android:layout_centerVertical="true"
-                android:textSize="22dp"
-                android:textColor="@color/white"
-                android:layout_height="wrap_content" />
-            <CheckBox
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                style="@style/CheckedTextViewLeft"
-                android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Каждый день 07:00"
-                android:layoutDirection="rtl"/>
-        </RelativeLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
