@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mainCoffie = findViewById(R.id.mainCoffie);
         mainBear = findViewById(R.id.mainBear);
         timer = new Timer();
-        timer.schedule(new TimerTaskTemp(), 0,1000);
+        timer.schedule(new TimerTaskTemp(), 0, 1000);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_rasp) {
-            Intent intent = new Intent(this, activity_autobolling.class);
+            Intent intent = new Intent(this, Settings.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

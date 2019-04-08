@@ -114,6 +114,38 @@
             android:text="@string/autoBoiling"
             android:textColor="@color/white"
             android:textSize="18sp" />
+        <RelativeLayout
+            android:onClick="clickSI1"
+            android:background="#88333388"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/water"/>
+            <TextView
+                android:layout_marginLeft="70dp"
+                android:layout_width="wrap_content"
+                android:text="Утро"
+                android:layout_centerVertical="true"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                style="@style/CheckedTextViewLeft"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Каждый день 07:00"
+                android:layoutDirection="rtl"/>
+        </RelativeLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
