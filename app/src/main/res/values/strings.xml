@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Умный чайник</string>
-    <string name="nextBoiling">След. кипячение</string>
+    <string name="nextBoiling">След. напиток</string>
     <string name="drunkToday">Сегодня выпито</string>
     <string name="backlight">Подсветка</string>
     <string name="maxTemp">Максимальная температура: </string>
